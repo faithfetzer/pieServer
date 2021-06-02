@@ -1,0 +1,14 @@
+npm start vs npm dev
+
+npm start-when runnign the npm start command from the root directory of the project, node will look for a 'scripts' object in the package.json file. once found with the key 'start', it will run the command tha tis specific as its value.
+
+npm dev-indicates that we're running th eproject in developemnt mode and we're using 'nodemon' to do so
+-nodemon allows us to make changes with having to restart the server after each change
+
+mode_modules-kacgaes that npm installs that allow our application and all of its dependencies to run properly
+
+package-lock.json- locks in the version of the packagaes that we're using-version control system that acts as a failsage
+
+express-lightweight web application framework used to help rganize our application into a mvc architecture within our server= mvc: model view controller
+-not a model view controller framework by iteslf. still need to use our own orm(object relational mapping) library
+-*sequalize

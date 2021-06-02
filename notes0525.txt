@@ -1,0 +1,7 @@
+sequelize =>
+-sequelize is a js library that we'll use to manage our postgresql databases
+-sequelize is an object relational mapper (orm) meaning that it sends our data to our databsses using js pbject syntax
+-sequelize is all about models- modelas are houw we shape the data we'll be sending to our databases
+-our models are botht he obecjts that we will interact with in our application as well as the primary tables that we'll create and manage in our databases
+pg =>
+-pg package allows us to write the dialect that that sequelize needs to speak to our postgresql databases-DB connection URI => database://user:password@host:port/dbname
