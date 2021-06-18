@@ -7,7 +7,9 @@ const validateSession = async (req, res, next) =>{
         return next()
     }else if(req.headers.authorization){
         const {authorization} = req.headers;
-        const payload = authorization ? jwt.verify(authorization, process.env.JWT_SECRET) : undefined
+        console.log("authorization -->", authorization);
+        const payload = authorization ? jwt.verify(authorization, process.env.JWT_SECRET) : undefined;
+        console.log("payload -->", payload);
         if(payload){
             let foundUser = await UserModel.findOne({
                 where: {id: payload.id}
@@ -27,6 +29,7 @@ const validateSession = async (req, res, next) =>{
         }
     } else {
         res.status(403).send({
+            request: req,
             message: 'forbidden'
         })
     }
